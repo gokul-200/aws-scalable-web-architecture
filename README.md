@@ -58,7 +58,7 @@ flowchart TD
 
 ## 3. How the project is secured
 
-![Security model](docs/security-model.png)
+![Security model](docs/security-model2.png)
 
 Security is about controlling which paths are allowed, not merely adding a firewall.
 
