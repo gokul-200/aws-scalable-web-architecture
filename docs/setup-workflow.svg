@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="600" viewBox="0 0 1800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Recreate the project: deployment sequence</title>
+  <desc id="desc">A six-step AWS deployment flow from VPC and security groups to EC2 and ALB, ending with validation and cleanup.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f4f5f6; }
+      .title { font: 700 54px 'Segoe UI', Arial, sans-serif; fill: #0f172a; }
+      .box-blue { fill: #edf5fb; stroke: #3d86d7; stroke-width: 3; }
+      .box-green { fill: #edf9ef; stroke: #6cc27d; stroke-width: 3; }
+      .circle-blue { fill: #1e5ec9; }
+      .circle-green { fill: #2a9e69; }
+      .num { font: 700 44px 'Segoe UI', Arial, sans-serif; fill: white; }
+      .label { font: 700 26px 'Segoe UI', Arial, sans-serif; fill: #0f172a; }
+      .sub { font: 400 18px 'Segoe UI', Arial, sans-serif; fill: #0f172a; }
+      .footer { font: 400 26px 'Segoe UI', Arial, sans-serif; fill: #2d3c4f; }
+      .arrow { fill: none; stroke: #4a5a68; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+      .arrowhead { fill: #4a5a68; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1800" height="600"/>
+
+  <text class="title" x="80" y="120">Recreate the project: deployment sequence</text>
+
+  <!-- Box 1 -->
+  <rect class="box-blue" x="80" y="200" width="200" height="220" rx="18"/>
+  <circle class="circle-blue" cx="180" cy="260" r="42"/>
+  <text class="num" x="180" y="272" text-anchor="middle">1</text>
+  <text class="label" x="180" y="335" text-anchor="middle">VPC + subnets</text>
+  <text class="sub" x="180" y="374" text-anchor="middle">Plan CIDRs and AZs</text>
+
+  <!-- Arrow 1 -->
+  <line class="arrow" x1="280" y1="310" x2="350" y2="310"/>
+  <polygon class="arrowhead" points="350,310 338,300 338,320"/>
+
+  <!-- Box 2 -->
+  <rect class="box-blue" x="350" y="200" width="200" height="220" rx="18"/>
+  <circle class="circle-blue" cx="450" cy="260" r="42"/>
+  <text class="num" x="450" y="272" text-anchor="middle">2</text>
+  <text class="label" x="450" y="335" text-anchor="middle">Security groups</text>
+  <text class="sub" x="450" y="374" text-anchor="middle">ALB → app :8000</text>
+
+  <!-- Arrow 2 -->
+  <line class="arrow" x1="550" y1="310" x2="620" y2="310"/>
+  <polygon class="arrowhead" points="620,310 608,300 608,320"/>
+
+  <!-- Box 3 -->
+  <rect class="box-blue" x="620" y="200" width="200" height="220" rx="18"/>
+  <circle class="circle-blue" cx="720" cy="260" r="42"/>
+  <text class="num" x="720" y="272" text-anchor="middle">3</text>
+  <text class="label" x="720" y="335" text-anchor="middle">EC2 + ASG</text>
+  <text class="sub" x="720" y="374" text-anchor="middle">Launch template</text>
+
+  <!-- Arrow 3 -->
+  <line class="arrow" x1="820" y1="310" x2="890" y2="310"/>
+  <polygon class="arrowhead" points="890,310 878,300 878,320"/>
+
+  <!-- Box 4 -->
+  <rect class="box-blue" x="890" y="200" width="200" height="220" rx="18"/>
+  <circle class="circle-blue" cx="990" cy="260" r="42"/>
+  <text class="num" x="990" y="272" text-anchor="middle">4</text>
+  <text class="label" x="990" y="335" text-anchor="middle">Target group</text>
+  <text class="sub" x="990" y="374" text-anchor="middle">Health check path</text>
+
+  <!-- Arrow 4 -->
+  <line class="arrow" x1="1090" y1="310" x2="1160" y2="310"/>
+  <polygon class="arrowhead" points="1160,310 1148,300 1148,320"/>
+
+  <!-- Box 5 -->
+  <rect class="box-blue" x="1160" y="200" width="200" height="220" rx="18"/>
+  <circle class="circle-blue" cx="1260" cy="260" r="42"/>
+  <text class="num" x="1260" y="272" text-anchor="middle">5</text>
+  <text class="label" x="1260" y="335" text-anchor="middle">ALB listener</text>
+  <text class="sub" x="1260" y="374" text-anchor="middle">Forward to target</text>
+
+  <!-- Arrow 5 -->
+  <line class="arrow" x1="1360" y1="310" x2="1430" y2="310"/>
+  <polygon class="arrowhead" points="1430,310 1418,300 1418,320"/>
+
+  <!-- Box 6 -->
+  <rect class="box-green" x="1430" y="200" width="250" height="220" rx="18"/>
+  <circle class="circle-green" cx="1555" cy="260" r="42"/>
+  <text class="num" x="1555" y="272" text-anchor="middle">6</text>
+  <text class="label" x="1555" y="335" text-anchor="middle">Validate + delete</text>
+  <text class="sub" x="1555" y="374" text-anchor="middle">Test, then clean up</text>
+
+  <!-- Footer -->
+  <text class="footer" x="220" y="520">Use the setup guide in README.md. Costs vary by region and resources; remove billable resources after testing.</text>
+</svg>
