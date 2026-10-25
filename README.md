@@ -87,7 +87,7 @@ An ASG desired capacity of two does not, by itself, prove that CPU-based scale-o
 
 ## 5. Recreate the project
 
-![Setup workflow](docs/setup-workflow.png)
+![Setup workflow](docs/setup-workflow.svg)
 
 This is a console-first guide. Exact screen labels can change; verify settings before creating resources.
 
