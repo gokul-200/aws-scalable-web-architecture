@@ -1,24 +1,8 @@
-# Secrets and local environment
+# Secrets
 .env
-.env.*
-!.env.example
 *.pem
 *.key
-credentials
-.aws/
-
-# Python
+# OS / editor
+.DS_Store
+.vscode/
 __pycache__/
-*.py[cod]
-.venv/
-venv/
-
-# Terraform (when added)
-**/.terraform/*
-*.tfstate
-*.tfstate.*
-crash.log
-override.tf
-override.tf.json
-*_override.tf
-*_override.tf.json
